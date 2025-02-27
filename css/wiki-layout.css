@@ -26,6 +26,10 @@ header {
   width: var(--header-width);
   background-color: var(--header-bg-color);
   flex-shrink: 0;
+  position: sticky;
+  top: 0;
+  left: 0;
+  height: 100vh;
 }
 
 h1.logo {
@@ -41,6 +45,7 @@ h1.logo span.text {
 
 main {
   padding: var(--page-padding);
+  flex-grow: 1;
 }
 
 h2.title {
@@ -119,6 +124,10 @@ aside {
   width: var(--aside-width);
   background-color: var(--aside-bg-color);
   flex-shrink: 0;
+  position: sticky;
+  top: 0;
+  left: 0;
+  height: 100vh;
 }
 
 aside h2 {
