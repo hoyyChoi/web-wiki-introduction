@@ -87,6 +87,7 @@ div.gallery {
 div.gallery img {
   width: 250px;
   height: 250px;
+  object-fit: cover;
 }
 
 div.thumbnail {
@@ -155,7 +156,6 @@ section#comment form textarea {
   overflow-y: hidden;
   &::placeholder {
     line-height: 160%;
-    font-size: 0.875rem;
     font-weight: 400;
     color: var(--Gray-60, #94989f);
   }
