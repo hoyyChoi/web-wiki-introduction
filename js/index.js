@@ -5,6 +5,17 @@ commentTextElement.addEventListener("input", () => {
   commentTextElement.style.height = commentTextElement.scrollHeight + "px";
 });
 
+commentTextElement.addEventListener("keydown", (e) => {
+  if (e.isComposing) return;
+
+  if (e.key === "Enter") {
+    if (!e.shiftKey) {
+      e.preventDefault();
+      registerBtn.click();
+    }
+  }
+});
+
 registerBtn.addEventListener("click", () => {
   const commentText = commentTextElement.value;
   if (commentText === "") {
@@ -29,5 +40,6 @@ registerBtn.addEventListener("click", () => {
   commentList.prepend(newComment);
 
   commentTextElement.value = "";
+  commentTextElement.blur();
   commentTextElement.style.height = "31px";
 });
