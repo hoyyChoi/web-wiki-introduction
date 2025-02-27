@@ -42,4 +42,5 @@ registerBtn.addEventListener("click", () => {
   commentTextElement.value = "";
   commentTextElement.blur();
   commentTextElement.style.height = "31px";
+  alert("댓글이 등록되었습니다.");
 });
